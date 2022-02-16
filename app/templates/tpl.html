@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>模板语法的学习</h1>
+<div>{{ n1 }}</div>
+<div>{{ n2 }}</div>
+<div>{{ n2.0 }}</div>
+<div>{{ n2.1 }}</div>
+<div>{{ n2.2 }}</div>
+<!--for循环-->
+<div>
+    {% for item in n2 %}
+        <span>{{ item }}</span>
+    {% endfor %}
+</div>
+<div>{{ n3 }}</div>
+<div>{{ n3.name }}</div>
+<div>{{ n3.salary }}</div>
+<div>{{ n3.role }}</div>
+<ul>
+    {% for a,b in n3.items %}
+        <li>{{ a }}={{ b }}</li>
+    {% endfor %}
+</ul>
+<div>
+    {% if n4.0.name == "小杜" %}
+        <span>
+        小杜好棒
+        </span>
+    {% elif n4.0.name == "" %}
+        <span>
+        ,,,
+        </span>
+    {% endif %}
+</div>
+</body>
+</html>
